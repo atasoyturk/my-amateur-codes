@@ -1,2 +1,2 @@
-# testrepo
-Just testing
+# c codes
+usefull amateur c codes
