@@ -1,2 +1,2 @@
-# c codes
-usefull amateur c codes
+# Usefull c and c++ codes.
+
