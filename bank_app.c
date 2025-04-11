@@ -16,10 +16,8 @@ void compYearly();
 void compMonthly();
 void compDaily();
 
-int main()
-{
+int main(){
     int choice;
-
     do {
         printf("\n\n1. Check Balance");
         printf("\n2. Deposit Money");
@@ -32,8 +30,7 @@ int main()
         printf("\n\nEnter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice)
-        {
+        switch (choice){
         case 1:
             checkBalance();
             break;
@@ -63,62 +60,61 @@ int main()
     return 0;
 }
 
-void checkBalance()
-{
+void checkBalance(){
     printf("\nYour current balance is: %.2f units", unit);
 }
 
-void depositMoney()
-{
+void depositMoney(){
     int deposit;
     printf("\nEnter amount of the deposit: ");
     scanf("%d", &deposit);
+    
     unit += deposit;
     printf("\nYour new balance is: %.2f", unit);
 }
 
-void withdrawMoney()
-{
+void withdrawMoney(){
     int withdraw;
     printf("\nEnter amount of the withdrawal: ");
     scanf("%d", &withdraw);
-    if (withdraw > unit)
-    {
+    if (withdraw > unit){
         printf("\nInsufficient funds!");
     }
-    else
-    {
+    else{
         unit -= withdraw;
         printf("\nYour new balance is: %.2f", unit);
     }
 }
 
-void compYearly()
-{
+void compYearly(){
     int years;
     float rate = 0.022; 
+    
     printf("\nEnter number of years: ");
     scanf("%d", &years);
+    
     float amount = unit * pow(1 + rate, years);
     printf("\nThe total amount after %d years is: %.2f units", years, amount);
 }
 
-void compMonthly()
-{
+void compMonthly(){
     int months;
     float rate = 0.002; 
+    
     printf("\nEnter number of months: ");
     scanf("%d", &months);
+    
     float amount = unit * pow(1 + rate, months);
     printf("\nThe total amount after %d months is: %.2f units", months, amount);
 }
 
-void compDaily()
-{
+void compDaily(){
     int days;
     float rate = 0.0002; 
+    
     printf("\nEnter number of days: ");
     scanf("%d", &days);
+    
     float amount = unit * pow(1 + rate, days);
     printf("\nThe total amount after %d days is: %.2f units", days, amount);
 }
