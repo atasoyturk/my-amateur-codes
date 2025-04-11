@@ -3,8 +3,8 @@
 
 void plural(char* s1, char* s2);
 
-int main() 
-{
+int main() {
+
     char string1[80], string2[80];
     printf("Enter an English noun: ");
     scanf("%s", string1);
@@ -16,17 +16,14 @@ int main()
 }
 
 void plural(char* s1, char* s2){
-    
     int i = 0;
     int length = 0;
 
-    while (s1[length] != '\0')
-    {
+    while (s1[length] != '\0'){
         length++;
     }
 
-    if (length > 0 && s1[length - 1] == 'y')
-    {
+    if (length > 0 && s1[length - 1] == 'y'){
         for (i = 0; i < length - 1; i++){
             s2[i] = s1[i];
         }
@@ -46,15 +43,12 @@ void plural(char* s1, char* s2){
                 s2[i++] = 'e';
                 s2[i++] = 's';
                 s2[i] = '\0';
+            }else {
+                for (i = 0; i < length; i++){
+                s2[i] = s1[i];
+                }
+                s2[i++] = 's';
+            s2[i] = '\0';
             }
-    else
-    {
-        for (i = 0; i < length; i++)
-        {
-            s2[i] = s1[i];
-        }
-        s2[i++] = 's';
-        s2[i] = '\0';
-    }
 }
 
