@@ -7,7 +7,7 @@
  montly rate 0.002
  daily rate 0.0002
 */
-float unit = 1000; // Initial balance
+float unit = 1000; 
 
 void checkBalance();
 void depositMoney();
